@@ -1,0 +1,7 @@
+SCHOOL_POSITIONS = (
+    ("SD", "SCHOOL DIRECTOR"),
+    ("SC", "SCHOOL COORDINATOR"),
+    ("SJ", "SCHOOL JANITOR"),
+    ("SW", "SCHOOL WATCHMAN"),
+    ("T", "TEACHER"),
+)
