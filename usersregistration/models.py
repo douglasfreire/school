@@ -3,7 +3,7 @@ from django.db import models
 from usersregistration.choices import SCHOOL_POSITIONS
 
 class Person(models.Model):
-    photo = models.CharField(max_length=100)
+    photo = models.ImageField(upload_to='images')
     name = models.CharField(max_length=100)
     cpf = models.CharField(max_length=20)
     rg = models.CharField(max_length=14)
