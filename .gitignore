@@ -127,3 +127,9 @@ dmypy.json
 
 # Pyre type checker
 .pyre/
+
+# Virtualenv
+venvSchool
+
+# Txts
+regra de negocio.txt
