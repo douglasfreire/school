@@ -9,13 +9,14 @@ from usersregistration.models import SchoolEmployee, Student
 
 
 class AdminThumbnailSpec(ImageSpec):
-    processors = [ResizeToFill(100, 30)]
+    processors = [ResizeToFill(100, 60)]
     # format = 'JPEG'
     options = {'quality': 60 }
 
 
 def cached_admin_thumb(instance):
     cached = ImageCacheFile(AdminThumbnailSpec(instance.photo))
+    print("cached", cached)
     cached.generate()
     return cached
 
@@ -29,6 +30,7 @@ class StudentSchoolAdmin(admin.ModelAdmin):
     admin_thumbnail = AdminThumbnail(image_field=cached_admin_thumb)
     
     admin_thumbnail.short_description = 'Photo'
+    admin_thumbnail.allow_tags = True
 
 
 
